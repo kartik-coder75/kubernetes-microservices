@@ -103,8 +103,6 @@ microservice-project/
 |-- frontend/
 ```
 
-> **Teaching point:** a microservice is a small service with one focused task. The backend owns the product API; the frontend is a separate app that calls it. They can be built and deployed independently.
-
 ## 3. Build the backend microservice
 
 **Step 7 - `backend/app.py`** (see the file in this repo). `/products` returns the product list and `socket.gethostname()` (the Pod name in Kubernetes); `/health` returns `{"status": "healthy"}`; `host="0.0.0.0"` lets it accept requests from outside its container.
