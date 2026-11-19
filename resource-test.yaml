@@ -1,0 +1,13 @@
+# Intentionally unschedulable Pod: requests far more than any local node has.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: resource-test
+spec:
+  containers:
+    - name: test-container
+      image: nginx:stable
+      resources:
+        requests:
+          cpu: "100"
+          memory: "100Gi"
